@@ -36,6 +36,11 @@ class Location
         $this->measurements = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->city;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

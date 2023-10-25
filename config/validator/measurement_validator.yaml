@@ -1,0 +1,17 @@
+App\Entity\Measurement:
+  properties:
+    wind:
+      - Range:
+          min: 0
+          max: 300
+          groups: [new,edit]
+    cloud:
+      - Range:
+          min: 0
+          max: 100
+          groups: [new,edit]
+
+    celsius:
+      - Regex:
+          pattern: '/\d/'
+
