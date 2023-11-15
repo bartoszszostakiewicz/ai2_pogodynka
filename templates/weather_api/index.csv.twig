@@ -1,0 +1,6 @@
+
+{#Szczecin,PL,2023-12-05,2 Szczecin,PL,2023-12-20,12#}
+
+{% for measurement in measurements %}
+{{ city }},{{ country }},{{ measurement.date | date('Y-m-d') }},{{ measurement.celsius}},{{ measurement.fahrenheit}}
+{% endfor %}

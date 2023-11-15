@@ -24,6 +24,8 @@ class Measurement
     #[ORM\Column(type: Types::DECIMAL, precision: 3, scale: '0')]
     private ?string $celsius = null;
 
+
+
     #[ORM\Column(nullable: true)]
     private ?int $wind = null;
 
@@ -63,6 +65,12 @@ class Measurement
     {
         return $this->celsius;
     }
+
+    public function getFahrenheit(): ?string
+    {
+        return $this->celsius * 9 / 5 + 32;
+    }
+
 
     public function setCelsius(string $celsius): static
     {
